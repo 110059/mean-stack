@@ -42,6 +42,14 @@ exports.findAll = (req, res) => {
     });
 };
 
+// find on some criteria
+/*Note.findOne({ title: 'ved' }, function (err, data) {
+    if(err) {
+        res.status(500).send(err);
+    }
+    res.send(data);
+});*/
+
 // Find a single note with a noteId
 exports.findOne = (req, res) => {
     Note.findById(req.params.noteId)
@@ -118,3 +126,21 @@ exports.delete = (req, res) => {
         });
     });
 };
+
+
+/* other methods
+Model.deleteMany()
+Model.deleteOne()
+Model.find()
+Model.findById()
+Model.findByIdAndDelete()
+Model.findByIdAndRemove()
+Model.findByIdAndUpdate()
+Model.findOne()
+Model.findOneAndDelete()
+Model.findOneAndRemove()
+Model.findOneAndUpdate()
+Model.replaceOne()
+Model.updateMany()
+Model.updateOne()
+*/
